@@ -1,0 +1,18 @@
+mixin buy-block(text)
+	.buy-block
+		.buy-item
+			a(href="javascript:;").buy-button
+				span.button--icon.button--icon__win
+				span Download for Free
+			if text
+				a(href="javascript:;").buy-more--link
+					span More about Windows version
+						span.icon-arrow__right
+		.buy-item
+			a(href="javascript:;").buy-button
+				span.button--icon.button--icon__mac
+				span Download for Free
+			if text
+				a(href="javascript:;").buy-more--link
+					span More about Mac version
+						span.icon-arrow__right

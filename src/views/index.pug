@@ -1,0 +1,18 @@
+extends ./template/_base.pug
+block script
+
+append content
+	block info-block
+		include blocks/info-block.pug
+	block main-block
+		include blocks/main-block.pug
+	block step-block
+		include blocks/step-block.pug
+	block description-block
+		include blocks/description-block.pug
+	block buttons-block
+		include blocks/buttons-block.pug
+	block support-block
+		include blocks/support-block.pug
+	
+

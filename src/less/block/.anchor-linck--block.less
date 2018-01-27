@@ -1,0 +1,59 @@
+.anchor--block {
+	text-align: center;
+	margin-top: 24px;
+}
+.anchor--link {
+	display: inline-block;
+	text-decoration: none;
+	color: #3581d5;
+
+	span {
+		display: inline-block;
+		vertical-align: middle;
+
+	}
+}
+.anchor--icon {
+	margin-top: -2px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #3581d5;
+	margin-right: 14px;
+	position: relative;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		width: 13px;
+		height: 3px;
+		margin-top: -3px;
+		background:#fff;
+		border-radius: 3px;
+		
+	}
+	
+	&:before {
+		left: 50%;
+		margin-left: -3px;
+		transform: rotate(45deg);
+	}
+	&:after {
+		right: 50%;
+		margin-right: -3px;
+		transform: rotate(-45deg);
+	}
+}	
+
+@media (min-width: 768px) {
+
+	.anchor--block {
+		margin-top: 34px;
+	}
+
+	.anchor--link {
+		font-size: 20px;
+	}
+}

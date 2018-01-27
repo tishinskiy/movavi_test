@@ -1,0 +1,171 @@
+.tabs--block {
+
+}
+
+.tabs--header {
+	
+}
+
+.tab--list {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.tab-item {
+	flex: 1 1 50%;
+	padding: 0 4px;
+
+}
+
+.tab--button {
+	display: block;
+	text-align: center;
+	background: #f6f6f6;
+	height: 64px;
+	line-height: 44px;
+	text-decoration: none;
+	color: #777;
+	padding: 10px 15px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+
+	span {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 1.3em;
+	}
+
+	&:hover {
+		color: #000;
+	}
+
+	&.tab--button__active {
+		font-weight: bold;
+		color: #000;
+		background: #eeeeee;
+	}
+}
+
+.tab-item__first {
+	padding-left: 0;
+
+	.tab--button {
+		border-top-left-radius: 0;
+	}
+}
+
+.tab-item__last {
+	padding-right: 0;
+
+	.tab--button {
+		border-top-right-radius: 0;
+	}
+}
+
+.tabs--content {
+	display: none;
+	background: #eeeeee;
+	padding-bottom: 60px;
+
+	&.tabs--content__active {
+		display: block !important;
+	}
+	
+}
+
+@media (min-width: 768px) {
+	.tabs--block {
+		
+	}
+
+	.tabs--header {
+		margin-left: -22px;
+	}
+
+	.tab--list {
+		width: 556px;
+		margin: auto;
+		justify-content: center;
+		margin-bottom: 38px;
+	}
+
+	.tab-item {
+		padding: 0;
+
+	}
+
+	.tab--button {
+		background: #fff;
+		height: 68px;
+		line-height: 42px;
+		color: #1962b2;
+		border:3px solid #1962b2 ;
+		font-size: 20px;
+
+		span {
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 1.3em;
+		}
+
+		&:hover {
+			color: #000;
+		}
+
+		&.tab--button__active {
+			font-weight: normal;
+			color: #fff;
+			background: #3581d5;
+			border-color: transparent;
+
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: -41px;
+				left: 50%;
+				margin-left: -30px;
+				width: 0px;
+				height: 0px;
+				border-bottom: 22px solid #eee;
+				border-left: 30px solid transparent;
+				border-right: 30px solid transparent;
+			}
+		}
+	}
+
+	.tab-item__first {
+
+		.tab--button {
+			border-right: 0;
+			border-radius: 6px 0 0 6px;
+		}
+	}
+
+	.tab-item__last {
+
+		.tab--button {
+			border-left: 0;
+			border-radius: 0 6px 6px 0;
+		}
+	}
+
+	.tabs--content {
+		padding-top: 15px;
+
+		&+.step-block {
+			padding-top: 37px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.tabs--block {
+		padding-top: 16px;
+	}
+
+	.tab--list {
+		width: 724px;
+	}
+}

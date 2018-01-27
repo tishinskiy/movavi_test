@@ -1,0 +1,149 @@
+.steps-wrap {
+	background: #fff;
+	padding-bottom: 35px;
+}
+.step-block {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.step--header {
+	margin-top: 2px;
+	padding-bottom: 14px;
+}
+
+.step--content {
+	
+}
+
+.step--text {
+	margin-top: 11px;
+	line-height: 1.65em;
+}
+.step--image {
+	margin-top: 12px;
+
+	img {
+		width: 100%;
+	}
+}
+
+.step--content__2 {
+	margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+
+	.step-block  {
+		padding-bottom: 15px;
+		.container {
+			padding-left: 45px;
+
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 11px;
+				left: 24px;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background: #bdbdbd;
+			}
+		}
+	}
+
+	.steps-wrap{
+
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 35px;
+			left:calc(~'50% - 355px');
+			width: 2px;
+			height: calc(~'100% + 22px');
+			background: #bdbdbd;
+			z-index: 2;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -60px;
+			left:calc(~'50% - 360px');
+			// left: 24px;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background: #bdbdbd;
+		}
+	}
+
+	.step--content {
+		display: flex;
+		flex-flow: row nowrap;
+		.step--text,
+		.step--image {
+			flex: 1 0;
+		}
+
+		.step--text {
+			order: 1;
+			padding-right: 32px;
+		}
+
+		.step--image {
+			margin-top: 17px;
+			order: 2;
+			flex: 0 0 345px;
+		}
+	}
+}
+
+
+@media (min-width: 1200px) {
+
+	.step-block  {
+
+		.container {
+			padding-left: 58px;
+
+			&:before {
+				top: 21px;
+				left: 29px;
+			}
+		}
+
+		padding-bottom: 10px;
+	}
+
+	.steps-wrap{
+
+		&:before {
+			top: 45px;
+			left:calc(~'50% - 566px');
+			height: calc(~'100% + 12px');
+		}
+		&:after {
+			bottom: -60px;
+			left:calc(~'50% - 571px');
+		}
+	}
+
+	.step--header {
+		padding-bottom: 10px;
+		h2 {
+			letter-spacing: 0.015em;
+		}
+	}
+	.step--content {
+		.step--text {
+			line-height: 1.5em;
+		}
+		.step--image {
+			margin-top: 20px;
+			flex-basis: 457px;
+		}
+	}
+}

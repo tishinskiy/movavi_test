@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+	head
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		//- link(rel="stylesheet", href="./css/normalize.css")
+		link(rel="stylesheet", href="./css/style.css")
+		block styles-link
+		title movavi
+
+	body
+		include ../blocks/buy-block.pug
+		.page-wrap
+			block header-block
+				include ../blocks/header-block.pug
+
+			block content
+		block footer-block
+			include ../blocks/footer-block.pug
+		script(src="./js/script.js")
+		block script
+

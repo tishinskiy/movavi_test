@@ -1,0 +1,123 @@
+.buy-block {
+	margin-top: 9px;
+}
+
+.buy-item {
+	margin-top: 32px;
+	text-align: center;
+
+}
+	
+@media(min-width: 768px) {
+
+	.buy-block {
+		display: flex;
+		flex-flow:row nowrap;
+		margin-top: 45px;
+	}
+
+	.buy-item {
+		margin-top: 0;
+		width: 50%;
+
+		&:first-child {
+			padding-right: 16px;
+		}
+		&:last-child {
+			padding-left: 16px;
+		}
+	}
+}
+	
+@media(min-width: 1200px) {
+
+	.buy-block {
+		display: flex;
+		flex-flow:row nowrap;
+		margin-top: 45px;
+	}
+
+	.buy-item {
+		margin-top: 0;
+		width: 269px;
+
+		&:first-child {
+			padding-right: 16px;
+		}
+		&:last-child {
+			padding-left: 16px;
+		}
+	}
+}
+.buy-button {
+	display: inline-block;
+	width: 100%;
+	text-decoration: none;
+	font-size: 20px;
+	color: #FFF;
+	background: #3581d5;
+	height: 72px;
+	line-height: 72px;
+	border-radius: 6px;
+
+
+	&:hover {
+		background-color: #1962b2;
+	}
+
+	span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+}
+
+.button--icon {
+	display: inline-block;
+	width: 24px;
+	height: 29px;
+	background-image: url('../images/button-icon.png');
+	background-repeat: no-repeat;
+	margin-right: 5px;
+	margin-top: -5px;
+}
+
+.button--icon__win {
+	background-position: left center;
+}
+
+.button--icon__mac {
+	background-position: right center;
+}
+
+.buy-more--link {
+	display: inline-block;
+	height: 22px;
+	text-decoration: none;
+	margin-top: 7px;
+	color: #1962b2;
+	font-size: 14px;
+	border-bottom: 1px solid #1962b2;
+	padding-right: 13px;
+
+	position: relative;
+
+	&:before {
+		content:'';
+		position: absolute;
+		right: 0;
+		top: 50%;
+		display: inline-block;
+		margin-top: 1px;
+		width: 4px;
+		height: 4px;
+		border-top: 1px solid #1962b2;
+		border-right: 1px solid #1962b2;
+		transform: rotate(45deg);
+	}
+
+	&:hover {
+		color: #3581d5;
+		border-bottom: 0;
+	}
+}
